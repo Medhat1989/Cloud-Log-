@@ -1,0 +1,18 @@
+
+{
+  "name": "CloudLog AI",
+  "short_name": "CloudLog",
+  "description": "Cabin Crew Human Factors & CRM Augmentation",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/753/753331.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

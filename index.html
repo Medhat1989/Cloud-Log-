@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudLog AI Prototype</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CloudLog AI">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/753/753331.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -100,6 +109,21 @@
         }
         .animate-fadeIn { animation: fadeIn 0.3s ease-out; }
         .animate-bounceScale { animation: bounceScale 2s infinite ease-in-out; }
+        
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #1e293b;
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #334155;
+        }
     </style>
 <script type="importmap">
 {
@@ -115,5 +139,14 @@
 </head>
 <body>
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(err => {
+            console.log('SW registration failed: ', err);
+          });
+        });
+      }
+    </script>
 </body>
 </html>
