@@ -1,0 +1,7 @@
+{
+  "name": "CloudLog AI - Cabin Crew Human Factors Prototype",
+  "description": "A non-punitive, human-centered AI system prototype for real-time cabin crew stress monitoring, coordination support, and CRM augmentation.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
